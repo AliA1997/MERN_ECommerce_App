@@ -43,8 +43,6 @@ module.exports = {
     deleteProduct(req, res) {
         //Destruct the id from the request params, since you have to delete a specific product.
         const { id } = req.params;
-        //THe id field in mongoose has a underscore before the id by default 
-        //_id 
         //Use an object to delete the specified product.
         Product.deleteOne({_id: id}).exec((err, product) => {
             if(err) console.log('Delete One Error-----------------', err)

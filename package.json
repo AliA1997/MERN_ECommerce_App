@@ -2,8 +2,6 @@
   "name": "mern-ecommerce-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
-  "main": "server/",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cloudinary": "^1.11.0",
@@ -24,6 +22,20 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-start": "node server/index.js",
+    "deploy": "now --public --dotenv=.env.prod -d"
+  },
+  "main": "server/",
+  "proxy": {
+    "/auth/callback": {
+      "target": "http://localhost:5000"
+    },
+    "/api": {
+      "target": "http://localhost:5000"
+    }
+  },
+  "now": {
+    "alias": "ali-store"
   }
 }

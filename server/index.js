@@ -30,7 +30,9 @@ const app = express();
 //NOTE: Make sure the POrt is the same as the proxy.
 const PORT = 4000;
 //Connect the mongoose to the database using it's connect method.
-mongoose.connect(process.env.CONNECTION_STRING, (err) => {
+mongoose.connect(process.env.CONNECTION_STRING,
+    { useNewUrlParser: true },
+    (err) => {
     if(err) {
         console.log('Database Error----------------', err);
     }
