@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "34001da7-05b5-4a87-8dff-b2fe9eae2bd7",
+		"name": "ecommerce-collection-Step 4A Completed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ff9b302-9377-48ab-b03a-82142b75511f",
+						"type": "text/javascript",
+						"exec": [
+							"//Get the current response from the postman global object which will be of type json.",
+							"const response = pm.response.json();",
+							"",
+							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
+							"pm.test('check the status code is 200', () => {",
+							"    //Use chai language chains to improve the readability of the test on the pm object.",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"//Now we are gonna make it purposely fail.",
+							"pm.test('check if the status code 201', () => {",
+							"    //Use chai language chains to improve the readability of the test on the response VARIABLE. ",
+							"    response.to.have.status(201)",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4c6f1e1b-edaa-4d75-8696-b4ef44b0582d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t  \"sub\": \"github|23343715\",\n\t  \"nickname\": \"AliA1997\",\n\t  \"name\": \"Ali Qassem Alhaddad\",\n\t  \"picture\": \"https://avatars1.githubusercontent.com/u/23343715?v=4\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0fc1620-df05-4edb-9d7a-520518566614",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/products/5b3dbaff2bae8e1a2ad6ed59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products",
+						"5b3dbaff2bae8e1a2ad6ed59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50165f73-26bf-4ac8-81da-dbf4da38d2b1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Soccer Ball\",\n\t\"description\": \"A nice soccer ball\",\n\t\"price\": 10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products/5b61d670a0b6670c2dd85d25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products",
+						"5b61d670a0b6670c2dd85d25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4bf84d2b-7818-4124-8913-69637f03b416",
+						"type": "text/javascript",
+						"exec": [
+							"//Get the current response from the postman global object which will be of type json.",
+							"const response = pm.response.json();",
+							"",
+							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
+							"pm.test('check the status code is 200', () => {",
+							"    //Use chai language chains to improve the readability of the test on the pm object.",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
+							"pm.test('check if response is an array', () => {",
+							"    //Use chai language chains to improve the readability of the test on the pm object.",
+							"    //Test if the resposne is an array",
+							"    pm.expect(response).to.be.an('array');",
+							"})",
+							"",
+							"",
+							"//Now we are gonna make it purposely fail.",
+							"pm.test('check if response is a object', () => {",
+							"    //Use chai language chains to improve the readability of the test on the response VARIABLE. ",
+							"    //Test if the response is an object ",
+							"    pm.expect(response).to.be.an('object');",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/products/5b3db96b4c934d1a078219d8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products",
+						"5b3db96b4c934d1a078219d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "db6f71f5-1a53-4163-9a29-563987ad59ce",
+						"type": "text/javascript",
+						"exec": [
+							"//Get the current response from the postman global object which will be of type json.",
+							"const response = pm.response.json();",
+							"",
+							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
+							"pm.test('check the status code is 200', () => {",
+							"    //Use chai language chains to improve the readability of the test on the pm object.",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
+							"pm.test('check if response is an array', () => {",
+							"    //Use chai language chains to improve the readability of the test on the pm object.",
+							"    //Test if the resposne is an array",
+							"    pm.expect(response).to.be.an('array');",
+							"})",
+							"",
+							"",
+							"//Now we are gonna make it purposely fail.",
+							"pm.test('check if response is a object', () => {",
+							"    //Use chai language chains to improve the readability of the test on the response VARIABLE. ",
+							"    //Test if the response is an object ",
+							"    pm.expect(response).to.be.an('object');",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea05c204-9b07-473b-961c-deebe866f620",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Basketball\",\n\t\"description\": \"A Nice Basketball\",\n\t\"price\": 50\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
