@@ -72,7 +72,6 @@ setTimeout(() => {
     // Use request parameter to remove item from cart since you are looking a specific item in cart.
     app.delete('/api/user-data/cart/:id', userController.removeFromCart);
 
-    // app
 
     //When user login
     app.post('/api/login', userController.login)
