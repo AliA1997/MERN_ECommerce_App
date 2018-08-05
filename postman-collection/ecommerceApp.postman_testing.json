@@ -1,324 +1,179 @@
 {
-	"info": {
-		"_postman_id": "34001da7-05b5-4a87-8dff-b2fe9eae2bd7",
-		"name": "ecommerce-collection-Step 4A Completed",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	"id": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"name": "e-commerce-collection",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [ ],
+	"order": [
+	"48e54815-65a7-47be-9f1a-24536e76f461",
+	"f16b54d1-ba1e-445a-bad3-b7530a8f189a",
+	"8a0ce812-44cb-47eb-8a1e-a7bf95cd9117",
+	"13c13006-c17a-43ea-973a-08b6c3953d96",
+	"b9628f98-a9ed-4773-9630-a53570ec13f8",
+	"cace660d-50af-4a76-8ee2-0055901f7525",
+	"c29f55b4-eb54-428a-88c5-9d541e6ce524"
+	],
+	"folders_order": [ ],
+	"folders": [ ],
+	"requests": [
+	{
+	"id": "13c13006-c17a-43ea-973a-08b6c3953d96",
+	"name": "http://localhost:4000/api/products/5b3db96b4c934d1a078219d8",
+	"url": "http://localhost:4000/api/products/5b3db96b4c934d1a078219d8",
+	"description": "",
+	"data": [ ],
+	"dataMode": "raw",
+	"headerData": [
+	{
+	"key": "Content-Type",
+	"value": "application/json"
+	}
+	],
+	"method": "PUT",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"rawModeData": "{ "name": "Soccer Ball", "description": "A nice soccer ball", "price": 10 }",
+	"headers": "Content-Type: application/json ",
+	"pathVariables": [ ]
 	},
-	"item": [
-		{
-			"name": "Get All Users",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "8ff9b302-9377-48ab-b03a-82142b75511f",
-						"type": "text/javascript",
-						"exec": [
-							"//Get the current response from the postman global object which will be of type json.",
-							"const response = pm.response.json();",
-							"",
-							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
-							"pm.test('check the status code is 200', () => {",
-							"    //Use chai language chains to improve the readability of the test on the pm object.",
-							"    pm.response.to.have.status(200);",
-							"})",
-							"",
-							"//Now we are gonna make it purposely fail.",
-							"pm.test('check if the status code 201', () => {",
-							"    //Use chai language chains to improve the readability of the test on the response VARIABLE. ",
-							"    response.to.have.status(201)",
-							"})"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:4000/api/users",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Login User",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "4c6f1e1b-edaa-4d75-8696-b4ef44b0582d",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t  \"sub\": \"github|23343715\",\n\t  \"nickname\": \"AliA1997\",\n\t  \"name\": \"Ali Qassem Alhaddad\",\n\t  \"picture\": \"https://avatars1.githubusercontent.com/u/23343715?v=4\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:4000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Product",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "a0fc1620-df05-4edb-9d7a-520518566614",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:4000/api/products/5b3dbaff2bae8e1a2ad6ed59",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"products",
-						"5b3dbaff2bae8e1a2ad6ed59"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Product",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "50165f73-26bf-4ac8-81da-dbf4da38d2b1",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Soccer Ball\",\n\t\"description\": \"A nice soccer ball\",\n\t\"price\": 10\n}"
-				},
-				"url": {
-					"raw": "http://localhost:4000/api/products/5b61d670a0b6670c2dd85d25",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"products",
-						"5b61d670a0b6670c2dd85d25"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Product",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "4bf84d2b-7818-4124-8913-69637f03b416",
-						"type": "text/javascript",
-						"exec": [
-							"//Get the current response from the postman global object which will be of type json.",
-							"const response = pm.response.json();",
-							"",
-							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
-							"pm.test('check the status code is 200', () => {",
-							"    //Use chai language chains to improve the readability of the test on the pm object.",
-							"    pm.response.to.have.status(200);",
-							"})",
-							"",
-							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
-							"pm.test('check if response is an array', () => {",
-							"    //Use chai language chains to improve the readability of the test on the pm object.",
-							"    //Test if the resposne is an array",
-							"    pm.expect(response).to.be.an('array');",
-							"})",
-							"",
-							"",
-							"//Now we are gonna make it purposely fail.",
-							"pm.test('check if response is a object', () => {",
-							"    //Use chai language chains to improve the readability of the test on the response VARIABLE. ",
-							"    //Test if the response is an object ",
-							"    pm.expect(response).to.be.an('object');",
-							"})"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:4000/api/products/5b3db96b4c934d1a078219d8",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"products",
-						"5b3db96b4c934d1a078219d8"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Products",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "db6f71f5-1a53-4163-9a29-563987ad59ce",
-						"type": "text/javascript",
-						"exec": [
-							"//Get the current response from the postman global object which will be of type json.",
-							"const response = pm.response.json();",
-							"",
-							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
-							"pm.test('check the status code is 200', () => {",
-							"    //Use chai language chains to improve the readability of the test on the pm object.",
-							"    pm.response.to.have.status(200);",
-							"})",
-							"",
-							"//Do the pm.test to perform a test with a note, which can be anything, and a callback performing the test.",
-							"pm.test('check if response is an array', () => {",
-							"    //Use chai language chains to improve the readability of the test on the pm object.",
-							"    //Test if the resposne is an array",
-							"    pm.expect(response).to.be.an('array');",
-							"})",
-							"",
-							"",
-							"//Now we are gonna make it purposely fail.",
-							"pm.test('check if response is a object', () => {",
-							"    //Use chai language chains to improve the readability of the test on the response VARIABLE. ",
-							"    //Test if the response is an object ",
-							"    pm.expect(response).to.be.an('object');",
-							"})"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:4000/api/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Product",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "ea05c204-9b07-473b-961c-deebe866f620",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Basketball\",\n\t\"description\": \"A Nice Basketball\",\n\t\"price\": 50\n}"
-				},
-				"url": {
-					"raw": "http://localhost:4000/api/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"api",
-						"products"
-					]
-				}
-			},
-			"response": []
-		}
+	{
+	"id": "48e54815-65a7-47be-9f1a-24536e76f461",
+	"name": "http://localhost:4000/api/users",
+	"url": "http://localhost:4000/api/users",
+	"description": "",
+	"data": null,
+	"dataMode": "params",
+	"headerData": [ ],
+	"method": "GET",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"headers": "",
+	"pathVariables": [ ]
+	},
+	{
+	"id": "8a0ce812-44cb-47eb-8a1e-a7bf95cd9117",
+	"name": "http://localhost:4000/api/products/5b3dbaff2bae8e1a2ad6ed59",
+	"url": "http://localhost:4000/api/products/5b3dbaff2bae8e1a2ad6ed59",
+	"description": "",
+	"data": null,
+	"dataMode": "params",
+	"headerData": [ ],
+	"method": "DELETE",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"headers": "",
+	"pathVariables": [ ]
+	},
+	{
+	"id": "b9628f98-a9ed-4773-9630-a53570ec13f8",
+	"name": "http://localhost:4000/api/products/5b3db96b4c934d1a078219d8",
+	"url": "http://localhost:4000/api/products/5b3db96b4c934d1a078219d8",
+	"description": "",
+	"data": null,
+	"dataMode": "params",
+	"headerData": [ ],
+	"method": "GET",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"headers": "",
+	"pathVariables": [ ]
+	},
+	{
+	"id": "c29f55b4-eb54-428a-88c5-9d541e6ce524",
+	"name": "http://localhost:4000/api/products",
+	"url": "http://localhost:4000/api/products",
+	"description": "",
+	"data": [ ],
+	"dataMode": "raw",
+	"headerData": [
+	{
+	"key": "Content-Type",
+	"value": "application/json"
+	}
+	],
+	"method": "POST",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"rawModeData": "{ "name": "Basketball", "description": "A Nice Basketball", "price": 50 }",
+	"headers": "Content-Type: application/json ",
+	"pathVariables": [ ]
+	},
+	{
+	"id": "cace660d-50af-4a76-8ee2-0055901f7525",
+	"name": "http://localhost:4000/api/products",
+	"url": "http://localhost:4000/api/products",
+	"description": "",
+	"data": null,
+	"dataMode": "params",
+	"headerData": [ ],
+	"method": "GET",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"headers": "",
+	"pathVariables": [ ]
+	},
+	{
+	"id": "f16b54d1-ba1e-445a-bad3-b7530a8f189a",
+	"name": "http://localhost:4000/api/register",
+	"url": "http://localhost:4000/api/register",
+	"description": "",
+	"data": [ ],
+	"dataMode": "raw",
+	"headerData": [
+	{
+	"key": "Content-Type",
+	"value": "application/json"
+	}
+	],
+	"method": "POST",
+	"pathVariableData": [ ],
+	"queryParams": [ ],
+	"auth": null,
+	"events": [ ],
+	"folder": null,
+	"currentHelper": null,
+	"helperAttributes": null,
+	"collectionId": "5ee3ebcb-20e4-40f3-a089-cc1288e93929",
+	"rawModeData": "{ "sub": "github|23343715", "nickname": "AliA1997", "name": "Ali Qassem Alhaddad", "picture": "https://avatars1.githubusercontent.com/u/23343715?v=4" }",
+	"headers": "Content-Type: application/json ",
+	"pathVariables": [ ]
+	}
 	]
 }
