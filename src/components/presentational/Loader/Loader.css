@@ -1,0 +1,12 @@
+.loader-div {
+    height: 100vh;
+    width: 33%;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loader-div > * {
+    grid-row: 2/2;
+    font-size: 3em;
+}

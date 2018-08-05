@@ -28,7 +28,7 @@ const express = require('express');
 const app = express();
 //Define the Port your will be running your server on.
 //NOTE: Make sure the POrt is the same as the proxy.
-const PORT = 4000;
+const PORT = 5000;
 //Connect the mongoose to the database using it's connect method.
 mongoose.connect(process.env.CONNECTION_STRING,
     { useNewUrlParser: true },

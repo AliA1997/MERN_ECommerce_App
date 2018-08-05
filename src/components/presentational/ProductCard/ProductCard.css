@@ -1,0 +1,7 @@
+.product-card.container {
+    margin: 5%;
+    border: solid 1px black;
+}
+.product-card.label {
+    font-size: 2em;
+}
