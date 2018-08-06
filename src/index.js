@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+//Now import your Router for your routes and wrap your app in it. 
+import { BrowserRouter } from 'react-router-dom';
+// import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+// registerServiceWorker();
