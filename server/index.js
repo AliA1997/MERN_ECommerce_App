@@ -74,7 +74,7 @@ setTimeout(() => {
 
 
     //When user login
-    app.post('/api/login', userController.login)
+    app.get('/auth/callback', userController.login)
     //NO NEED FOR A REGISTER SINCE YOUR ARE USING AUTH0.
     //Just need a login, since you are logging from your social media provider no need to register, only looks if a user already has a account.
 

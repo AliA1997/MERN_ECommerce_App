@@ -7,7 +7,9 @@ const Schema = mongoose.Schema;
 const product = new Schema({
     name: String,
     description: String,
-    price: Number
+    price: Number,
+    //New Property added to model.
+    picture: String
 });
 
 //To create a model, use the name of the model, and the schema with the properties of the model

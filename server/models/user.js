@@ -11,7 +11,9 @@ const user = new Schema({
     name: String,
     email: String,
     username: String,
-    auth0_id: String
+    auth0_id: String,
+    //New Property added to model.
+    profile_picture: String
 });
 
 //Export the model on the mongoose.
