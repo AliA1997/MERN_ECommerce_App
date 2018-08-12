@@ -13,7 +13,9 @@ const user = new Schema({
     username: String,
     auth0_id: String,
     //New Property added to model.
-    profile_picture: String
+    profile_picture: String,
+    //Admin Property added to model.
+    is_admin: Boolean
 });
 
 //Export the model on the mongoose.

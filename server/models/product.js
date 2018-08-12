@@ -8,7 +8,7 @@ const product = new Schema({
     name: String,
     description: String,
     price: Number,
-    //New Property added to model.
+    //Add a New picture added to model.
     picture: String
 });
 

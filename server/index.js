@@ -62,6 +62,8 @@ app.use(session({
 //User endpoints 
 //Use when retrieving user data from request session. We middleware we defined earlier. 
 setTimeout(() => {
+    //Now setup cloudinary this endpoint will get the credentials from cloudinary_controller which will be signed. 
+    app.get('/api/upload', cloudinaryController.upload);
     //Read the user's session.
     app.get('/api/user-data', userController.readUserData);
 

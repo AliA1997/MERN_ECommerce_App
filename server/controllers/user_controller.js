@@ -41,7 +41,10 @@ module.exports = {
                             email: email,
                             username: nickname,
                             profile_picture: picture,
-                            auth0_id: sub
+                            auth0_id: sub,
+                            //For now set it to true, then after you login set it to false, so other users are not considered the admin.
+                            // is_admin: true 
+                            is_admin: false
                         });
                         //Assign the user to the session.
                         req.session.user = newUser;
