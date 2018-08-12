@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if Navbar is correct! 1`] = `
+<div
+  className="nav container"
+>
+  <div
+    className="desktop-nav"
+  >
+    <p
+      className="nav-link"
+      onClick={[Function]}
+    >
+      Home
+    </p>
+    <p
+      className="nav-link"
+      onClick={[Function]}
+    >
+      About
+    </p>
+    <p
+      className="nav-link"
+      onClick={[Function]}
+    >
+      Cart
+    </p>
+    <p
+      className="nav-link"
+      onClick={[Function]}
+    >
+      Login
+    </p>
+  </div>
+</div>
+`;

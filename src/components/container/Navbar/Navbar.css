@@ -27,4 +27,21 @@
 }
 .nav-link:nth-child(4) {
     grid-column: 6/6;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link:nth-child(4) > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-image {
+    height: 75%;
+    padding: 5%;
+    width: 30%;
+    border-radius: 50%;
 }
