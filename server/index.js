@@ -57,7 +57,7 @@ app.use(session({
     }
 }));
 //Allow cross origin requests.
- app.use(cors());
+//  app.use(cors());
 
 //User endpoints 
 //Use when retrieving user data from request session. We middleware we defined earlier. 

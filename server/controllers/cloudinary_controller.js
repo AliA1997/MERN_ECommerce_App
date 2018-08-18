@@ -16,6 +16,6 @@ module.exports = {
             signature 
         }
         //Then send our payload to our front-end 
-        res.status(200).send(payload);
+        res.status(200).json({payload});
     }
 }
